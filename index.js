@@ -11,7 +11,7 @@ server.get("/hello", (req, res) => {
 
     return res.json({
         title: "Hello World",
-        message: `Olá ${nome} meu amigo`,
+        message: `Olá meu amigo`,
         idade: idade
     });
 });
