@@ -19,12 +19,13 @@ server.get("/hello", (req, res) => {
 // http://localhost:5000/hello/Simas
 // Route params = hello/:nome
 
-server.get("/hello/:nome", (req, res) => {
-    const nome = req.params.nome;
+server.get("/hello/:nome/:idade", (req, res) => {
+    const { nome, idade } = req.params;
 
     return res.json({
         title: "Hello World",
-        message: `Olá ${nome} tudo bem?`
+        message: `Olá ${nome} tudo bem?`,
+        idade: idade
     })
 })
 
